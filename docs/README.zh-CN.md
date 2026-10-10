@@ -60,18 +60,6 @@
 - **核心库**（`lib/`）：HLS 解析、DASH 解析、下载引擎（重试 / 并发池 / 解密）。
 - **Manager 页面**（`manager/`）：普通扩展页面，因此可用 `Blob` / `URL` / `crypto.subtle` 完成流式合并。
 
-## 与 Video DownloadHelper 的差异
-
-| | Video DownloadHelper | 本项目 |
-|---|---|---|
-| 开源 | ✗（专有） | ✓ MIT |
-| 伴生程序 | 部分能力需装 VDH Companion / ffmpeg | **不需要**，全部在浏览器内完成 |
-| HLS/DASH 合并 | ✓（依赖外部程序） | ✓（浏览器内合并；TS 直拼 / fMP4 直拼） |
-| 格式转换 | ✓（外部 ffmpeg） | ✗（`.ts` 可用 VLC 直接播放，或自行 `ffmpeg -i in.ts -c copy out.mp4`） |
-| 音视频混流（mux） | ✓ | ✗（DASH 音轨单独存为 `.m4a`） |
-| DRM 内容 | ✗ | ✗（技术上都不可行） |
-| 遥测 | 有限 | 无 |
-
 ## 已知限制
 
 - **DRM**（Widevine / FairPlay / PlayReady）内容无法下载（`ContentProtection` 会被识别并提示）。

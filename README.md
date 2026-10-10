@@ -60,18 +60,6 @@ An open-source browser video downloader extension (Chrome / Edge, Manifest V3). 
 - **Core library** (`lib/`): HLS parser, DASH parser, download engine (retry / concurrency pool / decryption).
 - **Manager page** (`manager/`): a regular extension page, so it can use `Blob` / `URL` / `crypto.subtle` to stream-assemble files.
 
-## Comparison with Video DownloadHelper
-
-| | Video DownloadHelper | This project |
-|---|---|---|
-| Open source | ✗ (proprietary) | ✓ MIT |
-| Companion app | Some features require VDH Companion / ffmpeg | **Not required** — everything runs in the browser |
-| HLS / DASH merge | ✓ (depends on external tools) | ✓ (in-browser; raw TS / fMP4 concat) |
-| Format conversion | ✓ (external ffmpeg) | ✗ (`.ts` plays directly in VLC, or run `ffmpeg -i in.ts -c copy out.mp4`) |
-| A/V muxing | ✓ | ✗ (DASH audio saved as separate `.m4a`) |
-| DRM content | ✗ | ✗ (technically infeasible for both) |
-| Telemetry | Limited | None |
-
 ## Known Limitations
 
 - **DRM** (Widevine / FairPlay / PlayReady) content cannot be downloaded (`ContentProtection` is detected and reported).
