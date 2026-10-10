@@ -1,0 +1,12 @@
+{
+  "name": "open-video-downloader",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Open-source browser extension that sniffs and downloads web videos (HLS / DASH / direct files). No tracking, no servers.",
+  "scripts": {
+    "test": "node test/parse.test.mjs",
+    "icons": "python scripts/make_icons.py",
+    "package": "powershell -ExecutionPolicy Bypass -File scripts/package.ps1"
+  }
+}

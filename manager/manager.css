@@ -1,0 +1,198 @@
+:root {
+  --bg: #f1f5f9;
+  --panel: #ffffff;
+  --fg: #1e293b;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --accent: #4f46e5;
+  --accent-soft: #eef2ff;
+  --ok: #16a34a;
+  --warn: #d97706;
+  --danger: #dc2626;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b1120;
+    --panel: #101a30;
+    --fg: #e2e8f0;
+    --muted: #94a3b8;
+    --border: #24304a;
+    --accent: #818cf8;
+    --accent-soft: #1c2745;
+    --ok: #4ade80;
+    --warn: #fbbf24;
+    --danger: #f87171;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--fg);
+  font: 14px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, "Microsoft YaHei", sans-serif;
+}
+
+.hdr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 28px;
+  border-bottom: 1px solid var(--border);
+  background: var(--panel);
+}
+.brand { display: flex; align-items: center; gap: 10px; }
+.logo { width: 26px; height: 26px; }
+h1 { font-size: 17px; margin: 0; }
+.hdr-hint { color: var(--muted); font-size: 12.5px; }
+
+.jobs {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 20px 24px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.job {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px 18px;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.06);
+}
+
+.job-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.job-name {
+  flex: 1;
+  min-width: 0;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.job-url {
+  color: var(--muted);
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 2px;
+}
+
+.badge {
+  flex-shrink: 0;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  background: var(--accent-soft);
+  color: var(--accent);
+  text-transform: uppercase;
+}
+.badge.ok { background: #dcfce7; color: #15803d; }
+.badge.err { background: #fee2e2; color: #b91c1c; }
+.badge.warn { background: #fef3c7; color: #b45309; }
+@media (prefers-color-scheme: dark) {
+  .badge.ok { background: #14351f; color: #4ade80; }
+  .badge.err { background: #3b1517; color: #f87171; }
+  .badge.warn { background: #392c0d; color: #fbbf24; }
+}
+
+.job-config {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-top: 12px;
+}
+.job-config label { color: var(--muted); font-size: 12.5px; }
+.job-config select {
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--fg);
+  font-size: 13px;
+  max-width: 320px;
+}
+.job-config .check {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 12.5px;
+  cursor: pointer;
+}
+
+.bar {
+  margin-top: 12px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+.bar-fill {
+  height: 100%;
+  width: 0%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #6366f1, #22d3ee);
+  transition: width 0.25s ease;
+}
+.bar-fill.err { background: var(--danger); }
+
+.job-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 12.5px;
+}
+
+.job-actions { display: flex; gap: 8px; margin-top: 12px; }
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 7px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn.primary { background: var(--accent); color: #fff; }
+.btn.primary:hover { filter: brightness(1.1); }
+.btn.subtle { background: transparent; color: var(--muted); border: 1px solid var(--border); }
+.btn.subtle:hover { color: var(--danger); border-color: var(--danger); }
+.btn.ghost { background: transparent; color: var(--muted); border: none; }
+.btn.ghost:hover { color: var(--accent); }
+
+.job-error {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #fef2f2;
+  color: #991b1b;
+  font-size: 12.5px;
+}
+@media (prefers-color-scheme: dark) {
+  .job-error { background: #3b1517; color: #fca5a5; }
+}
+
+.empty {
+  text-align: center;
+  color: var(--muted);
+  padding: 60px 0;
+}
+
+.hidden { display: none !important; }

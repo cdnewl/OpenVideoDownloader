@@ -1,0 +1,88 @@
+{
+  "extName": {
+    "message": "Open Video Downloader"
+  },
+  "extDescription": {
+    "message": "Detect and download videos from any website — HLS, DASH, MP4 and more. 100% local, open source, no tracking."
+  },
+  "settings": { "message": "Settings" },
+
+  "filterAll": { "message": "All" },
+  "filterVideo": { "message": "Video" },
+  "filterStream": { "message": "Streams" },
+  "filterAudio": { "message": "Audio" },
+
+  "emptyTitle": { "message": "No media detected yet" },
+  "emptyHint": { "message": "Play a video on this page, then reopen this popup." },
+  "unsupportedPage": { "message": "This page type is not supported — open a regular website (http/https)." },
+  "countLabel": {
+    "message": "$N$ media item(s)",
+    "placeholders": { "N": { "content": "$1" } }
+  },
+  "downloadAll": { "message": "Download all" },
+  "clearAll": { "message": "Clear" },
+  "itemCopy": { "message": "Copy URL" },
+  "itemOpen": { "message": "Open in new tab" },
+  "itemDownload": { "message": "Download" },
+  "errDownload": { "message": "Download failed" },
+
+  "type_hls": { "message": "HLS" },
+  "type_dash": { "message": "DASH" },
+  "type_video": { "message": "Video" },
+  "type_audio": { "message": "Audio" },
+  "type_segment": { "message": "Segment" },
+  "sourceNetwork": { "message": "network" },
+  "sourcePage": { "message": "page" },
+
+  "managerTitle": { "message": "Download Manager" },
+  "managerEmpty": { "message": "No downloads queued." },
+  "keepOpen": { "message": "Keep this tab open while downloads run" },
+  "pickQuality": { "message": "Quality:" },
+  "includeAudio": { "message": "Also download audio track (separate file)" },
+  "startDownload": { "message": "Download" },
+  "downloadAnyway": { "message": "Download anyway" },
+  "cancel": { "message": "Cancel" },
+
+  "statusProbing": { "message": "Analyzing…" },
+  "statusReady": { "message": "Ready" },
+  "statusDownloading": { "message": "Downloading" },
+  "statusSaving": { "message": "Saving…" },
+  "statusDone": { "message": "Done" },
+  "statusError": { "message": "Failed" },
+  "statusCancelled": { "message": "Cancelled" },
+
+  "segmentsLabel": {
+    "message": "Segments $D$/$T$",
+    "placeholders": {
+      "D": { "content": "$1" },
+      "T": { "content": "$2" }
+    }
+  },
+  "encryptedLabel": { "message": "AES-128 encrypted" },
+  "masterPlaylistLabel": {
+    "message": "master · $N$ variant(s)",
+    "placeholders": { "N": { "content": "$1" } }
+  },
+  "liveLabel": { "message": "Live" },
+  "liveWarning": { "message": "This is a live stream (no end list). Only the segments currently in the playlist will be downloaded." },
+  "errLive": { "message": "Live stream — only the current window can be downloaded." },
+  "errDrm": { "message": "This content is DRM-protected and cannot be downloaded." },
+  "errEncryption": { "message": "Unsupported stream encryption (only AES-128 is supported)." },
+  "errFetch": { "message": "Fetch failed" },
+  "expiredSource": { "message": "Source expired — reopen the popup and select the video again." },
+
+  "optionsTitle": { "message": "Open Video Downloader — Settings" },
+  "sectionDetection": { "message": "Detection" },
+  "sectionDownload": { "message": "Download" },
+  "optDetectAudio": { "message": "Detect audio files (mp3, m4a, …)" },
+  "optIncludeSegments": { "message": "Also list raw stream segments (.ts / .m4s)" },
+  "optMinSize": { "message": "Ignore direct files smaller than" },
+  "optConcurrency": { "message": "Parallel segment downloads" },
+  "optSaveAs": { "message": "Always ask where to save" },
+  "optSubdir": { "message": "Save into subfolder (empty = browser default)" },
+  "optTemplate": { "message": "Filename template" },
+  "optTemplateHint": { "message": "Tokens: {title} page title · {host} site domain · {ext} extension · {date} {time} current date/time" },
+  "optSave": { "message": "Save" },
+  "optSaved": { "message": "Saved ✓" },
+  "optReset": { "message": "Reset to defaults" }
+}

@@ -1,0 +1,15 @@
+dist/
+node_modules/
+*.zip
+*.crx
+*.pem
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+*.swp
+*.swo
