@@ -1,6 +1,6 @@
 # Open Video Downloader
 
-[中文](docs/README.zh-CN.md) · **English**
+**English** · [中文](docs/README.zh-CN.md)
 
 An open-source browser video downloader extension (Chrome / Edge, Manifest V3). It sniffs web traffic for media and supports detection & download of **HLS (m3u8)**, **DASH (MPD)** and direct files (mp4 / webm / mp3 …). It aims to match the core feature set of the commercial Video DownloadHelper, but **runs fully locally, with zero telemetry and no server dependency** — no companion app required.
 
